@@ -7,8 +7,8 @@ long f(long a, long b)
     long m = a * b;
     //最大公约数--相减法
     //     while(a<b || a>b){
-    //        if(a<b)b=b-a;
-    //        if(a>b)a=a-b;
+    //        if(a<b)b=b-a;//此时最终b是最大公约数
+    //        if(a>b)a=a-b;//此时最终a是最大公约数
     //    }
 
     /*最大公约数--辗转相除法*/
@@ -20,7 +20,7 @@ long f(long a, long b)
         a = b;
         b = c;
         c = a % b;
-    }
+    }//此时b是最大公约数
 
     return m / b;
 }
